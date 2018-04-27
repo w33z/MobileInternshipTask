@@ -46,7 +46,12 @@ class RepoDetailVC: UIViewController {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.makeRounded(15)
-        imageView.backgroundColor = UIColor.red
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        
+        if let urlString = repo.owner?.avatar_url {
+            imageView.loadImageUsingCache(urlString: urlString)
+        }
         return imageView
     }()
  

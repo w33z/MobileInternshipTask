@@ -22,6 +22,7 @@
 		254F5C41209342EA0012B2A0 /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C40209342EA0012B2A0 /* TableViewHelper.swift */; };
 		254F5C4420934D410012B2A0 /* ReposTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C4320934D410012B2A0 /* ReposTableViewCell.swift */; };
 		254F5C462093812D0012B2A0 /* RepoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C452093812D0012B2A0 /* RepoDetailVC.swift */; };
+		254F5C4820938AEF0012B2A0 /* CacheImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C4720938AEF0012B2A0 /* CacheImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		254F5C40209342EA0012B2A0 /* TableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
 		254F5C4320934D410012B2A0 /* ReposTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposTableViewCell.swift; sourceTree = "<group>"; };
 		254F5C452093812D0012B2A0 /* RepoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailVC.swift; sourceTree = "<group>"; };
+		254F5C4720938AEF0012B2A0 /* CacheImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				254F5C2F20922B6F0012B2A0 /* MakeRounded.swift */,
+				254F5C4720938AEF0012B2A0 /* CacheImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				254F5C0F2090F4E60012B2A0 /* PickUserVC.swift in Sources */,
 				254F5C0D2090F4E60012B2A0 /* AppDelegate.swift in Sources */,
 				254F5C3D20932B000012B2A0 /* ReposVC.swift in Sources */,
+				254F5C4820938AEF0012B2A0 /* CacheImageView.swift in Sources */,
 				254F5C462093812D0012B2A0 /* RepoDetailVC.swift in Sources */,
 				254F5C332092307F0012B2A0 /* DataService.swift in Sources */,
 			);
