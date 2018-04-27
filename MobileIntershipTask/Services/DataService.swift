@@ -13,7 +13,7 @@ class DataService {
         
     func fetchUser(username: String, _ completion: @escaping (_ user: User?) ->()) {
         
-        let urlString = githubURL + username.lowercased()
+        let urlString = GITHUB_URL + username.lowercased()
         
         if let url = URL(string: urlString) {
             URLSession.shared.dataTask(with: url) { (data, responce, error) in

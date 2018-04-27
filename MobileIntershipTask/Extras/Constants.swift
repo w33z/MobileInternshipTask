@@ -7,4 +7,7 @@
 //
 
 // Links
-let githubURL = "https://api.github.com/users/"
+let GITHUB_URL = "https://api.github.com/users/"
+
+// Reuse Identifier
+let REPOS_CELL = "repos_cell"

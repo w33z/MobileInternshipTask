@@ -20,6 +20,7 @@
 		254F5C3D20932B000012B2A0 /* ReposVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C3C20932B000012B2A0 /* ReposVC.swift */; };
 		254F5C3F209332490012B2A0 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C3E209332490012B2A0 /* Repo.swift */; };
 		254F5C41209342EA0012B2A0 /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C40209342EA0012B2A0 /* TableViewHelper.swift */; };
+		254F5C4420934D410012B2A0 /* ReposTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C4320934D410012B2A0 /* ReposTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		254F5C3C20932B000012B2A0 /* ReposVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposVC.swift; sourceTree = "<group>"; };
 		254F5C3E209332490012B2A0 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		254F5C40209342EA0012B2A0 /* TableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
+		254F5C4320934D410012B2A0 /* ReposTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				254F5C39209235AE0012B2A0 /* Model */,
-				254F5C382092350C0012B2A0 /* Extras */,
+				254F5C4220934CF40012B2A0 /* View */,
+				254F5C2C20921F130012B2A0 /* Controllers */,
 				254F5C37209234FB0012B2A0 /* Services */,
 				254F5C3120922E8A0012B2A0 /* Extensions */,
-				254F5C2C20921F130012B2A0 /* Controllers */,
+				254F5C382092350C0012B2A0 /* Extras */,
 				254F5C0C2090F4E60012B2A0 /* AppDelegate.swift */,
 				254F5C102090F4E60012B2A0 /* Main.storyboard */,
 				254F5C132090F4EA0012B2A0 /* Assets.xcassets */,
@@ -155,6 +158,14 @@
 				254F5C3E209332490012B2A0 /* Repo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		254F5C4220934CF40012B2A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				254F5C4320934D410012B2A0 /* ReposTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				254F5C36209234310012B2A0 /* Constants.swift in Sources */,
+				254F5C4420934D410012B2A0 /* ReposTableViewCell.swift in Sources */,
 				254F5C3020922B6F0012B2A0 /* MakeRounded.swift in Sources */,
 				254F5C3B209235BB0012B2A0 /* User.swift in Sources */,
 				254F5C3F209332490012B2A0 /* Repo.swift in Sources */,

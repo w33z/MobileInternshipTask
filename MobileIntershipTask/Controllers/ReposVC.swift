@@ -22,6 +22,7 @@ class ReposVC: UITableViewController {
         super.viewDidLoad()
         
         navigationController?.navigationBar.prefersLargeTitles = true
+        tableView.register(ReposTableViewCell.self, forCellReuseIdentifier: REPOS_CELL)
         
         DataService.instance.fetchRepositories(user: user) { (repos) in
             guard let rep = repos else { print("None repos"); return }
@@ -32,7 +33,10 @@ class ReposVC: UITableViewController {
             }
         }
     }
+}
 
+extension ReposVC {
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         if repos.count > 0 {
             tableView.separatorStyle = .singleLine
@@ -42,22 +46,26 @@ class ReposVC: UITableViewController {
             return 0
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repos.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "reuse")
-        let repo = repos[indexPath.row]
         
-        cell.textLabel?.text = repo.name
-        cell.detailTextLabel?.text = repo.owner?.login
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: REPOS_CELL, for: indexPath) as? ReposTableViewCell else { return UITableViewCell() }
+        
+        let repo = repos[indexPath.row]
+        cell.configureCell(repo: repo)
+        
         return cell
     }
-
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(70)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+    }
 }
