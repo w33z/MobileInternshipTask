@@ -15,30 +15,49 @@ class ReposVC: UITableViewController {
             title = user.login
         }
     }
-
+    
+    var repos = [Repo]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        DataService.instance.fetchRepositories(user: user) { (repos) in
+            guard let rep = repos else { print("None repos"); return }
+            self.repos = rep
+
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        if repos.count > 0 {
+            tableView.separatorStyle = .singleLine
+            return 1
+        } else {
+            TableViewHelper.EmptyMessage(message: "User don't have any repositories!", viewController: self)
+            return 0
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return repos.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "reuse")
+        let repo = repos[indexPath.row]
+        
+        cell.textLabel?.text = repo.name
+        cell.detailTextLabel?.text = repo.owner?.login
 
         return cell
-    }*/
+    }
 
 }

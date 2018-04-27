@@ -18,6 +18,8 @@
 		254F5C36209234310012B2A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C35209234310012B2A0 /* Constants.swift */; };
 		254F5C3B209235BB0012B2A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C3A209235BB0012B2A0 /* User.swift */; };
 		254F5C3D20932B000012B2A0 /* ReposVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C3C20932B000012B2A0 /* ReposVC.swift */; };
+		254F5C3F209332490012B2A0 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C3E209332490012B2A0 /* Repo.swift */; };
+		254F5C41209342EA0012B2A0 /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C40209342EA0012B2A0 /* TableViewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		254F5C35209234310012B2A0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		254F5C3A209235BB0012B2A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		254F5C3C20932B000012B2A0 /* ReposVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposVC.swift; sourceTree = "<group>"; };
+		254F5C3E209332490012B2A0 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		254F5C40209342EA0012B2A0 /* TableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				254F5C35209234310012B2A0 /* Constants.swift */,
+				254F5C40209342EA0012B2A0 /* TableViewHelper.swift */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				254F5C3A209235BB0012B2A0 /* User.swift */,
+				254F5C3E209332490012B2A0 /* Repo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,6 +261,8 @@
 				254F5C36209234310012B2A0 /* Constants.swift in Sources */,
 				254F5C3020922B6F0012B2A0 /* MakeRounded.swift in Sources */,
 				254F5C3B209235BB0012B2A0 /* User.swift in Sources */,
+				254F5C3F209332490012B2A0 /* Repo.swift in Sources */,
+				254F5C41209342EA0012B2A0 /* TableViewHelper.swift in Sources */,
 				254F5C0F2090F4E60012B2A0 /* PickUserVC.swift in Sources */,
 				254F5C0D2090F4E60012B2A0 /* AppDelegate.swift in Sources */,
 				254F5C3D20932B000012B2A0 /* ReposVC.swift in Sources */,

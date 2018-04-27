@@ -56,8 +56,8 @@ class PickUserVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        usernameTextField.text = ""
     }
     
     @objc fileprivate func handlePickButtonTap() {
@@ -69,7 +69,7 @@ class PickUserVC: UIViewController {
                 DispatchQueue.main.async {
                     self.showAlert()
                 }
-                print("User nil")
+                print("None user")
                 return
             }
             
