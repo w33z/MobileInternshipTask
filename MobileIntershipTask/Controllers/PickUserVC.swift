@@ -45,7 +45,7 @@ class PickUserVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        addViews()
+        addSubViews()
         addConstraints()
     }
     
@@ -90,7 +90,7 @@ class PickUserVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    fileprivate func addViews() {
+    fileprivate func addSubViews() {
         view.backgroundColor = #colorLiteral(red: 1, green: 0.937696188, blue: 0.8126211533, alpha: 1)
         
         view.addSubview(usernameLabel)

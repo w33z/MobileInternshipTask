@@ -66,6 +66,10 @@ extension ReposVC {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
+        
+        let repo = repos[indexPath.row]
+        let detailVC = RepoDetailVC()
+        detailVC.repo = repo
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }

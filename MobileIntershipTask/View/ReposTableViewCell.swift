@@ -25,13 +25,24 @@ class ReposTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+ 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
+        addSubviews()
+        addConstraints()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    fileprivate func addSubviews() {
         addSubview(nameLabel)
         addSubview(languageLabel)
-        
+    }
+    
+    fileprivate func addConstraints() {
         nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5).isActive = true
         nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15).isActive = true
         nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
@@ -41,10 +52,6 @@ class ReposTableViewCell: UITableViewCell {
         languageLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor).isActive = true
         languageLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
         languageLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     func configureCell(repo: Repo){

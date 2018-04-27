@@ -18,7 +18,7 @@ class TableViewHelper {
         messageLabel.textColor = UIColor.black
         messageLabel.numberOfLines = 0;
         messageLabel.textAlignment = .center;
-        messageLabel.font = UIFont(name: "TrebuchetMS", size: 16)
+        messageLabel.font = UIFont(name: "Avenir-medium", size: 16)
         messageLabel.sizeToFit()
         
         viewController.tableView.backgroundView = messageLabel;
