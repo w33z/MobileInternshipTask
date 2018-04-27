@@ -17,6 +17,7 @@
 		254F5C332092307F0012B2A0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C322092307F0012B2A0 /* DataService.swift */; };
 		254F5C36209234310012B2A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C35209234310012B2A0 /* Constants.swift */; };
 		254F5C3B209235BB0012B2A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C3A209235BB0012B2A0 /* User.swift */; };
+		254F5C3D20932B000012B2A0 /* ReposVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254F5C3C20932B000012B2A0 /* ReposVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		254F5C322092307F0012B2A0 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		254F5C35209234310012B2A0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		254F5C3A209235BB0012B2A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		254F5C3C20932B000012B2A0 /* ReposVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				254F5C0E2090F4E60012B2A0 /* PickUserVC.swift */,
+				254F5C3C20932B000012B2A0 /* ReposVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				254F5C3B209235BB0012B2A0 /* User.swift in Sources */,
 				254F5C0F2090F4E60012B2A0 /* PickUserVC.swift in Sources */,
 				254F5C0D2090F4E60012B2A0 /* AppDelegate.swift in Sources */,
+				254F5C3D20932B000012B2A0 /* ReposVC.swift in Sources */,
 				254F5C332092307F0012B2A0 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,8 +10,6 @@ import UIKit
 
 class PickUserVC: UIViewController {
     
-    var user: User!
-
     private let usernameLabel: UILabel = {
         let label = UILabel()
         label.text = "Username"
@@ -53,7 +51,6 @@ class PickUserVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
@@ -76,14 +73,19 @@ class PickUserVC: UIViewController {
                 return
             }
             
-            self.user = user
-            //print("Pobrano dane \(user.login!)")
+            let reposVC = ReposVC()
+            reposVC.user = user
+            DispatchQueue.main.async {
+                    self.navigationController?.pushViewController(reposVC, animated: true)
+            }
         }
     }
     
     fileprivate func showAlert() {
         let alert = UIAlertController(title: "Error", message: "Username not found", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let alertAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            self.usernameTextField.text = ""
+        }
         alert.addAction(alertAction)
         self.present(alert, animated: true, completion: nil)
     }
