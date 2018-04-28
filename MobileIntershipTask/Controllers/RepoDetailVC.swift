@@ -36,8 +36,11 @@ class RepoDetailVC: UIViewController {
                 NSAttributedStringKey.font : UIFont(name: "Avenir-medium", size: 22)!
                 ])
         }
+        
         label.font.withSize(16)
         label.numberOfLines = 1
+        label.minimumScaleFactor = 0.5
+        label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -45,13 +48,14 @@ class RepoDetailVC: UIViewController {
     private lazy var ownerImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.makeRounded(15)
+        imageView.makeRounded(40)
         imageView.layer.borderWidth = 1
         imageView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
         if let urlString = repo.owner?.avatar_url {
             imageView.loadImageUsingCache(urlString: urlString)
         }
+        
         return imageView
     }()
  
@@ -74,11 +78,12 @@ class RepoDetailVC: UIViewController {
         ownerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
         ownerLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35).isActive = true
         ownerLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        ownerLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
         
         ownerImage.centerYAnchor.constraint(equalTo: ownerLabel.centerYAnchor).isActive = true
         ownerImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35).isActive = true
-        ownerImage.heightAnchor.constraint(equalToConstant: 75).isActive = true
-        ownerImage.widthAnchor.constraint(equalToConstant: 75).isActive = true
+        ownerImage.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        ownerImage.widthAnchor.constraint(equalToConstant: 80).isActive = true
         
         descriptionLabel.topAnchor.constraint(equalTo: ownerImage.bottomAnchor, constant: 15).isActive = true
         descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35).isActive = true
